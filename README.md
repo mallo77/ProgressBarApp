@@ -1,18 +1,19 @@
 # ProgressBarApp
-Note:
-=====
-1. jquery.hbsEnderTmpl.js is a plugin to help load and compile handlerbar template
-2. jquery.progressBarUI.js is a utility class that contains UI related functionality
-3. progressbar.handlerbar contains the template displaying progress bar UI
-4. app.scss contains custom styling
+## Note:
+* jquery.hbsEnderTmpl.js is a plugin to help load and compile handlerbar template
+* jquery.progressBarUI.js is a utility class that contains UI related functionality
+* progressbar.handlerbar contains the template displaying progress bar UI
+* app.scss contains custom styling
 
 
-Useful commands:
-================
-bower install
-
-bower install handlebars
-
-npm install
-
-grunt watch
+## Useful commands:
+* Run the below command to ensure your project has the updated foundation and handlebars libraries:
+	```bash
+	bower install
+	bower install handlebars
+	npm install
+	```
+* Run the below command enable automatic scss compilation and uglifying of javascript files
+	```bash
+	grunt watch
+	```

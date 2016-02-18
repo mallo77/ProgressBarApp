@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Progressbar</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Progress Bars Demo</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body>
 	<section class="progress-bar-demo">
 	  	<div class="row">
-	    	<div class="small-10 large-10 columns small-centered">
+	    	<div class="small-11 medium-11 large-10 columns small-centered">
 	      		<h2>Progress Bars Demo</h2>
 	        	
         		<div id="progress1" class="row"></div>			
@@ -15,24 +17,28 @@
 				<div id="progress3" class="row"></div>
 								
 		        <div class="row panel">
-	        	  	<div class="large-4 small-12 columns">
+	        	  	<div class="large-5 medium-5 small-12 columns">
 		          		<select id="selector">
 			                <option value="1" selected>Progress #1</option>
 			                <option value="2">Progress #2</option>
 			                <option value="3">Progress #3</option>
 		              	</select>
 		         	</div>
-		          	<div class="large-2 small-12 columns">
-		              	<button type="button" data-button="-25">-25</button>
-		          	</div>
-		          	<div class="large-2 small-12 columns">
-		              	<button type="button" data-button="-10">-10</button>
-		            </div>
-		          	<div class="large-2 small-12 columns">
-		              	<button type="button" data-button="10">10+</button>
-		            </div>
-		          	<div class="large-2 small-12 columns">
-		            	<button type="button" data-button="25">25+</button>
+		         	<div class="large-7 medium-7 small-12 columns">
+		         		<div class="row">
+				          	<div class="large-3 medium-3 small-6 columns">
+				              	<button class="small radius" data-button="-25">-25</button>
+				          	</div>
+				          	<div class="large-3 medium-3 small-6 columns">
+				              	<button class="small radius" data-button="-10">-10</button>
+				            </div>
+				          	<div class="large-3 medium-3 small-6 columns">
+				              	<button class="small radius" data-button="10">10+</button>
+				            </div>
+				          	<div class="large-3 medium-3 small-6 columns">
+				            	<button class="small radius" data-button="25">25+</button>
+				            </div>
+						</div>
 		            </div>			        
 		        </div>	      
 		    </div>

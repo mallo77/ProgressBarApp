@@ -7,13 +7,22 @@
 
 
 ## Useful commands:
-* Run the below command to ensure your project has the updated foundation and handlebars libraries:
+* Run the below command to ensure your project has the updated foundation and handlebars libraries
+	
 	```bash
 	bower install
+	```
+
+	```bash
 	bower install handlebars
+	```
+
+	```bash
 	npm install
 	```
+
 * Run the below command enable automatic scss compilation and uglifying of javascript files
+	
 	```bash
 	grunt watch
 	```

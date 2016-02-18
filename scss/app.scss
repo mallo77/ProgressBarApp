@@ -1,0 +1,46 @@
+/*--------------------------- 
+	Start Foundation OOTB 
+----------------------------*/
+@import "settings";
+@import "foundation";
+
+
+/*--------------------------- 
+	Start Custom Styles 
+----------------------------*/
+.progress-bar-demo {
+  
+  	h2 {
+  		text-align: center;  	
+  	}
+
+  	.progress {
+  		height: 3.0em;
+  		margin-bottom: 0.5em;
+  		padding: 0em;
+
+  		.meter {
+  			background: #a0d3e8;
+  		}
+
+  		.red {
+  			background: red;
+  		}
+
+  		p {
+  			line-height: 3.0em;
+  			left: 50%;
+  			margin-bottom: 0;
+  			text-align: center;
+  		}	
+  	}
+
+  	button {
+		  padding-top: 0.6em;
+		  padding-bottom: 0.6em;
+	 }
+
+	.panel {
+		padding-bottom: 0em;
+	}
+}

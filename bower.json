@@ -1,0 +1,6 @@
+{
+  "name": "ProgressbarApp",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}

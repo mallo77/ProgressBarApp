@@ -11,7 +11,7 @@ jQuery.progressBarUI = (function ( $ ) {
 				tmpl: {
 					data: {
 						id: "1", 
-						value: "30", 
+						value: "25", 
 						default: true
 					}
 				}					

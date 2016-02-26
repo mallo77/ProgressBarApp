@@ -14,13 +14,33 @@ module.exports = function(grunt) {
 
   //include all custom javascript files
   var jsApp = [
-    'js/jquery.hbsRenderTmpl.js',
-    'js/jquery.progressBarUI.js',
+    'js/jquery/jquery.hbsRenderTmpl.js',
+    'js/jquery/jquery.progressBarUI.js',
     'js/app.js'
+  ];
+
+  //include only the required vendor libraries
+  var reactjsVendor = [
+    'node_modules/react/dist/react.js'
+  ];
+
+  //include all custom reactjs files
+  var reactjsApp = [
+    'js/reactjs/*.js'
   ];
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    react: {
+      files: {
+        expand: true,
+        cwd: 'tmpl',
+        src: ['**/*.jsx'],
+        dest: 'js/reactjs',
+        ext: '.js'
+      }
+    },
 
     sass: {
       options: {
@@ -42,8 +62,8 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       all: [
-        'Gruntfile.js',
-        jsApp
+        jsApp,
+        reactjsApp
       ]
     },
 
@@ -55,14 +75,17 @@ module.exports = function(grunt) {
         files: {
           'js/libs/vendor.min.js': [jsVendor],
           'js/libs/foundation.min.js': [jsFoundation],
-          'js/libs/app.min.js': [jsApp]
+          'js/libs/app.min.js': [jsApp],
+          'js/libs/reactjs-vendor.min.js': [reactjsVendor],
+          'js/libs/reactjs-app.min.js': [reactjsApp]
         }
       }
     },
 
     clean: {
       js: [
-        'js/libs/'
+        'js/libs/',
+        'js/reactjs'
       ]
     },
 
@@ -102,10 +125,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-react');
 
   grunt.registerTask('build', [
     'clean',
-    'jshint', 
+    'jshint',
+    'react',
     'uglify',
     'sass'
   ]);

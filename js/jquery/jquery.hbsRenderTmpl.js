@@ -16,7 +16,7 @@
 			tmpl: {
 				path: 'tmpl/',
 				extn: '.handlebars',
-				name: 'progressbar',
+				name: 'ProgressBar',
 				data: null,
 			}
 		};

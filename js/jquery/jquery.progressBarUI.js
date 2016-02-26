@@ -29,7 +29,6 @@ jQuery.progressBarUI = (function ( $ ) {
 
 			$progressbar3.hbsRenderTmpl({
 				tmpl: {
-					name: "progressbar", 
 					data: {
 						id: "3", 
 						value: "75",

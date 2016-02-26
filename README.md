@@ -1,7 +1,7 @@
 # ProgressBarApp
 ## Note:
-* index.html is the main page and it contains the progressbar UI animation developed using jQuery and Handlebar templating framework
-* reactjs-index.html is the main page and it contains the progressbar UI animation developed using React.js framework
+* **index.html** is the main page and it contains the progressbar UI animation developed using jQuery and Handlebar templating framework
+* **reactjs-index.html** is the main page and it contains the progressbar UI animation developed using React.js framework
 * jquery.hbsEnderTmpl.js is a plugin to help load and compile handlerbar template
 * jquery.progressBarUI.js is a utility class that contains UI related functionality
 * progressbar.handlerbar contains the template displaying progress bar UI

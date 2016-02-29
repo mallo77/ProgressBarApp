@@ -1,34 +1,43 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
+  //include only the required foundation libraries
+  var jsFoundation = [
+    'bower_components/foundation/js/foundation/foundation.js' 
+  ];
+
+
   //include only the required vendor libraries
   var jsVendor = [
     'bower_components/foundation/js/vendor/jquery.js',
     'bower_components/handlebars/handlebars.js'
   ];
 
-  //include only the required foundation libraries
-  var jsFoundation = [
-    'bower_components/foundation/js/foundation/foundation.js' 
+  var reactjsVendor = [
+    'node_modules/react/dist/react.js'
   ];
+
+  var ractivejsVendor = [
+    'node_modules/ractive/ractive.js'
+  ];
+
 
   //include all custom javascript files
   var jsApp = [
     'js/jquery/jquery.hbsRenderTmpl.js',
     'js/jquery/jquery.progressBarUI.js',
-    'js/app.js'
+    'js/jquery/app.js'
   ];
 
-  //include only the required vendor libraries
-  var reactjsVendor = [
-    'node_modules/react/dist/react.js'
-  ];
-
-  //include all custom reactjs files
   var reactjsApp = [
     'js/reactjs/*.js'
   ];
 
+  var ractivejsApp = [
+    'js/ractivejs/*.js'
+  ];  
+
+  
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -63,7 +72,8 @@ module.exports = function(grunt) {
       },
       all: [
         jsApp,
-        reactjsApp
+        reactjsApp,
+        ractivejsApp
       ]
     },
 
@@ -77,7 +87,9 @@ module.exports = function(grunt) {
           'js/libs/foundation.min.js': [jsFoundation],
           'js/libs/app.min.js': [jsApp],
           'js/libs/reactjs-vendor.min.js': [reactjsVendor],
-          'js/libs/reactjs-app.min.js': [reactjsApp]
+          'js/libs/reactjs-app.min.js': [reactjsApp],
+          'js/libs/ractivejs-vendor.min.js': [ractivejsVendor],
+          'js/libs/ractivejs-app.min.js': [ractivejsApp]
         }
       }
     },

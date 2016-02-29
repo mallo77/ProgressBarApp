@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Progress Bars Demo - with Ractive.js</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div id="demo"></div>
+	
+	<!-- Main Demo Template -->
+	<script id="tmpl-app" type="text/ractive">
+		<section class="progress-bar-demo">
+		  	<div class="row">
+		    	<div class="small-11 medium-11 large-10 columns small-centered">
+		      		<h2>Progress Bars Demo</h2>
+		        	
+		        	<myProgressBar />
+
+			        <div class="row panel">
+		        	  	<mySelector />
+			         	<myButton />			        
+			        </div>	      
+			    </div>
+		  	</div>
+		</section>
+	</script>
+
+	<!-- ProgressBar Template -->
+	<script id="tmpl-progressbar" type="text/ractive">
+		{{ #each bars() }}
+			<div id="progress{{id}}" class="row">
+				<div class="progress large-12 small-12 columns">
+					<span id="bar{{ id }}" class="meter {{#if overflow}}red{{/if}}" 
+							data-value="{{ value }}" style="width: {{ width }}%">
+						<p class="percentage">{{ value }}%</p>
+					</span>				
+				</div>
+			</div>
+		{{ /each }}				
+	</script>
+	
+	<!-- Dropdown Selector Template -->
+	<script id="tmpl-selector" type="text/ractive">
+		<div class="large-5 medium-5 small-12 columns">
+      		<select id="selector" value="{{selectedBar}}" on-change="activateBar">
+                {{ #each options() }}
+                	<option value="{{id}}">{{ name }}</option>
+                {{ /each }}
+          	</select>
+     	</div>	
+	</script>
+	
+	<!-- Button Template -->
+	<script id="tmpl-button" type="text/ractive">
+		<div class="large-7 medium-7 small-12 columns">
+     		<div class="row">
+	          	{{ #each buttons() }}
+		          	<div class="large-3 medium-3 small-6 columns">
+		              	<button on-click="buttonClicked" class="small radius" data-button="{{ value }}">{{ label }}</button>
+		          	</div>
+	          	{{ /each }}
+	        </div>
+        </div>
+	</script>
+
+	<!-- Vendor javascript libraries -->
+	<script type="text/javascript" src="js/libs/ractivejs-vendor.min.js"></script>
+
+	<!-- Custom javascript files -->
+	<script type="text/javascript" src="js/libs/ractivejs-app.min.js"></script>
+</body>
+</html>

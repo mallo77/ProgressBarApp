@@ -17,7 +17,11 @@
     "grunt-sass": "1.0.0",
     "load-grunt-tasks": "~0.6.0",
     "node-sass": "3.3.3",
+    "ractive": "^0.7.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
+  },
+  "dependencies": {
+    "reactive": "^1.2.0"
   }
 }

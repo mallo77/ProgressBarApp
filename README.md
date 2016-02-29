@@ -1,5 +1,6 @@
 # ProgressBarApp
 ## Note:
+* **ractive-index.html** is the main page and it contains the progressbar UI animation developed using Ractive.js framework
 * **index.html** is the main page and it contains the progressbar UI animation developed using jQuery and Handlebar templating framework
 * **reactjs-index.html** is the main page and it contains the progressbar UI animation developed using React.js framework
 * jquery.hbsEnderTmpl.js is a plugin to help load and compile handlerbar template
